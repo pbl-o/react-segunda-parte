@@ -17,7 +17,9 @@ function App() {
   
   Cambiar el contenido de "visible" a home para llevar al componente home, register para ir al componente register y login para el componente login.
  */
-  let visible = 'register'
+
+  //para el Login, el email "almacenado" es: 'email' y la contraseña: 'thepassword'
+  let visible = 'home'
 
   return (
     <>
