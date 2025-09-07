@@ -1,4 +1,4 @@
-Pizzería (primera parte)
+Pizzería (segunda parte)
 
 Pablo Díaz
 

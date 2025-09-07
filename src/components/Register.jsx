@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+//En este componente decidí controlar el rellenado de campos por medio de condiciones. En el componenet Login, está controlado por el atributo 'required'.
+
 const Register = () => {
   //estados de input:
   const [email, setEmail] = useState("");
@@ -13,19 +15,28 @@ const Register = () => {
   const handleValidation = (e) => {
     e.preventDefault();
 
-    if (password.length < 6 || password !== confirmPassword || (!email.trim() || !password.trim() || !confirmPassword.trim())) {
+    if (
+      password.length < 6 ||
+      password !== confirmPassword ||
+      !email.trim() ||
+      !password.trim() ||
+      !confirmPassword.trim()
+    ) {
       setError(true);
-      password.length < 6 && setErrorMessage("tu contraseña debe ser mayor a 6 caracteres");
-      password !== confirmPassword && setErrorMessage("tu contraseña debe coincidir con la confirmación");
-      (!email.trim() || !password.trim() || !confirmPassword.trim()) && setErrorMessage("Todos los campos deben ser rellenados");
+      password.length < 6 &&
+        setErrorMessage("tu contraseña debe ser mayor a 6 caracteres");
+      password !== confirmPassword &&
+        setErrorMessage("tu contraseña debe coincidir con la confirmación");
+      (!email.trim() || !password.trim() || !confirmPassword.trim()) &&
+        setErrorMessage("Todos los campos deben ser rellenados");
       return;
-    } 
+    }
 
     setError(false);
-    alert('Succesfully Registered')
-    setEmail('')
-    setPassword('')
-    setConfirmPassword('')
+    alert("Succesfully Registered");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   };
 
   return (
@@ -41,43 +52,52 @@ const Register = () => {
       <form
         action=""
         onSubmit={handleValidation}
-        className="border rounded p-3 mx-auto d-flex flex-column justify-conntent-center align-items-center w-50 my-4"
+        className="border rounded py-5 mx-auto d-flex flex-column justify-conntent-center align-items-center w-50 my-4 gap-4"
       >
         {/* email inout */}
-        <div className="form-group p-4 d-flex flex-column">
+        <div className="form-group ">
           <label htmlFor="">Email</label>
           <input
             type="text"
             onChange={(e) => {
               setEmail(e.target.value);
-            }} className="form-control" value={email}
+            }}
+            className="form-control my-2"
+            value={email}
             //required
+            placeholder="Enter your email"
           />
         </div>
         {/* password input */}
-        <div className="form-group p-4 d-flex flex-column">
+        <div className="form-group ">
           <label htmlFor="">Password</label>
           <input
-            type="text"
+            type="password"
             onChange={(e) => {
               setPassword(e.target.value);
-            }} className="form-control" value={password}
+            }}
+            className="form-control my-2"
+            value={password}
             //required
+            placeholder="Enter your password"
           />
         </div>
         {/* password confirm */}
-        <div className="form-group p-4 d-flex flex-column">
+        <div className="form-group ">
           <label htmlFor="">Password confirmation</label>
           <input
-            type="text"
+            type="password"
             onChange={(e) => {
               setConfirmPassword(e.target.value);
-            }} className="form-control" value={confirmPassword}
+            }}
+            className="form-control my-2"
+            value={confirmPassword}
             //required
+            placeholder="Confirm your Password"
           />
         </div>
 
-        <button className="btn btn-dark col-6 " type="submit">
+        <button className="btn btn-dark col-6 mt-3" type="submit">
           Enviar
         </button>
       </form>
