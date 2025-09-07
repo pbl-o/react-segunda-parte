@@ -24,9 +24,9 @@ const Register = () => {
     ) {
       setError(true);
       password.length < 6 &&
-        setErrorMessage("tu contraseña debe ser mayor a 6 caracteres");
+        setErrorMessage("Tu contraseña debe tener más de 6 caracteres");
       password !== confirmPassword &&
-        setErrorMessage("tu contraseña debe coincidir con la confirmación");
+        setErrorMessage("Tu contraseña debe coincidir con la confirmación");
       (!email.trim() || !password.trim() || !confirmPassword.trim()) &&
         setErrorMessage("Todos los campos deben ser rellenados");
       return;

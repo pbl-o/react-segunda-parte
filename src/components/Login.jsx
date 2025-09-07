@@ -32,8 +32,6 @@ const Login = () => {
     setPassword("");
   };
 
-  //Copia de register para adptar y probar visualización condicionada
-
   return (
     <>
       <h2 className="text-center pt-3">Login</h2>
