@@ -27,9 +27,11 @@ const Login = () => {
     }
 
     setError(false);
+        setErrorMessage("")
     alert("Login Succesful");
     setEmail("");
     setPassword("");
+
   };
 
   return (
