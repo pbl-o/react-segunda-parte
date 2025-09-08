@@ -33,7 +33,7 @@ const Register = () => {
     }
 
     setError(false);
-    setErrorMessage("")
+    setErrorMessage("");
     alert("Succesfully Registered");
     setEmail("");
     setPassword("");
