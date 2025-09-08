@@ -8,20 +8,20 @@ import Login from "./components/Login.jsx";
 
 /* 
 
-Como no está indicado el conectar los botones con las secciones de la app, coloqué este "selector" para observar los contenidos requeridos y aislados.
+Como no está indicado en las instrucciones el conectar los botones con las secciones de la app, coloqué temporariamente un "selector" para facilitar el observar los contenidos requeridos de forma aislada.
   
 //Soluciones provisorias: 
 
-APP  
+App.jsx  
 Cambiar el contenido de visible a 'home' para visualizar al componente home, 'register' para visualizar al componente register y 'login' para el componente login.
 
-LOGIN
+Login.jsx
 Para el Login, el email "almacenado" es: 'email' y la contraseña: 'thepassword'
 
  */
 
 function App() {
-  let visible = "login";
+  let visible = "register";
 
   return (
     <>
